@@ -1,0 +1,16 @@
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.DataAccess\bin\Debug\netcoreapp2.1\CoreBlogApp.DataAccess.deps.json
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.DataAccess\bin\Debug\netcoreapp2.1\CoreBlogApp.DataAccess.dll
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.DataAccess\bin\Debug\netcoreapp2.1\CoreBlogApp.DataAccess.pdb
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.DataAccess\obj\Debug\netcoreapp2.1\CoreBlogApp.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.DataAccess\obj\Debug\netcoreapp2.1\CoreBlogApp.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.DataAccess\obj\Debug\netcoreapp2.1\CoreBlogApp.DataAccess.AssemblyInfo.cs
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.DataAccess\obj\Debug\netcoreapp2.1\CoreBlogApp.DataAccess.dll
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.DataAccess\obj\Debug\netcoreapp2.1\CoreBlogApp.DataAccess.pdb
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.DataAccess\obj\Debug\netcoreapp2.1\CoreBlogApp.DataAccess.csprojAssemblyReference.cache
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.DataAccess\bin\Debug\netcoreapp2.1\CoreBlogApp.Entity.dll
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.DataAccess\bin\Debug\netcoreapp2.1\CoreBlogApp.Entity.pdb
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.DataAccess\obj\Debug\netcoreapp2.1\CoreBlogApp.DataAccess.csproj.CopyComplete
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.DataAccess\bin\Debug\netcoreapp2.1\CoreBlogApp.Core.dll
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.DataAccess\bin\Debug\netcoreapp2.1\CoreBlogApp.Core.pdb
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.DataAccess\bin\Debug\netcoreapp2.1\CoreBlogApp.DataAccess.runtimeconfig.json
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.DataAccess\bin\Debug\netcoreapp2.1\CoreBlogApp.DataAccess.runtimeconfig.dev.json

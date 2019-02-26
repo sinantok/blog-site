@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Category>
+@{
+    ViewData["Title"] = "List";
+}
+
+<div class="container mt-3">
+    <h2>Blog List</h2>
+    <hr />
+    <div class="row">
+        <div class="col">
+            @if (Model.Count() > 0)
+            {
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.CategoryId</td>
+                                <td>@item.Name</td>
+                                <td>
+                                    @Html.ActionLink("Details", "Details", "Category", new { id = item.CategoryId }, new { @class = "btn btn-primary btn-sm" })
+                                    @Html.ActionLink("Delete", "Delete", "Category", new { id = item.CategoryId }, new { @class = "btn btn-danger btn-sm" })
+                                    @*<a class="" btn btn-primary btn-sm" asp-controller="Blog" asp-action="Delete" asp-route="@item.Id">Delete</a>*@
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <div class="alert alert-danger">
+                    Blog not found
+                </div>
+            }
+
+        </div>
+
+    </div>
+
+</div>
+
+

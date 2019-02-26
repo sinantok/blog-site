@@ -1,0 +1,9 @@
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Entity\bin\Debug\netcoreapp2.1\CoreBlogApp.Entity.deps.json
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Entity\bin\Debug\netcoreapp2.1\CoreBlogApp.Entity.dll
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Entity\bin\Debug\netcoreapp2.1\CoreBlogApp.Entity.pdb
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Entity\obj\Debug\netcoreapp2.1\CoreBlogApp.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Entity\obj\Debug\netcoreapp2.1\CoreBlogApp.Entity.AssemblyInfoInputs.cache
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Entity\obj\Debug\netcoreapp2.1\CoreBlogApp.Entity.AssemblyInfo.cs
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Entity\obj\Debug\netcoreapp2.1\CoreBlogApp.Entity.dll
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Entity\obj\Debug\netcoreapp2.1\CoreBlogApp.Entity.pdb
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Entity\obj\Debug\netcoreapp2.1\CoreBlogApp.Entity.csprojAssemblyReference.cache

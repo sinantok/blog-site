@@ -1,0 +1,16 @@
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Business\bin\Debug\netcoreapp2.1\CoreBlogApp.Business.deps.json
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Business\bin\Debug\netcoreapp2.1\CoreBlogApp.Business.dll
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Business\bin\Debug\netcoreapp2.1\CoreBlogApp.Business.pdb
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Business\bin\Debug\netcoreapp2.1\CoreBlogApp.DataAccess.dll
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Business\bin\Debug\netcoreapp2.1\CoreBlogApp.Entity.dll
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Business\bin\Debug\netcoreapp2.1\CoreBlogApp.DataAccess.pdb
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Business\bin\Debug\netcoreapp2.1\CoreBlogApp.Entity.pdb
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Business\obj\Debug\netcoreapp2.1\CoreBlogApp.Business.csprojAssemblyReference.cache
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Business\obj\Debug\netcoreapp2.1\CoreBlogApp.Business.csproj.CoreCompileInputs.cache
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Business\obj\Debug\netcoreapp2.1\CoreBlogApp.Business.AssemblyInfoInputs.cache
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Business\obj\Debug\netcoreapp2.1\CoreBlogApp.Business.AssemblyInfo.cs
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Business\obj\Debug\netcoreapp2.1\CoreBlogApp.Business.csproj.CopyComplete
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Business\obj\Debug\netcoreapp2.1\CoreBlogApp.Business.dll
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Business\obj\Debug\netcoreapp2.1\CoreBlogApp.Business.pdb
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Business\bin\Debug\netcoreapp2.1\CoreBlogApp.Core.dll
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Business\bin\Debug\netcoreapp2.1\CoreBlogApp.Core.pdb
