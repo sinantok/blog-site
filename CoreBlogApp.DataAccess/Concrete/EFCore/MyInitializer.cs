@@ -16,6 +16,7 @@ namespace CoreBlogApp.DataAccess.Concrete.EFCore
             //DatabaseContext context = app.ApplicationServices.GetRequiredService<DatabaseContext>();
             DatabaseContext context = new DatabaseContext();
 
+            //dbUpdate
             context.Database.Migrate();
 
             if(!context.Categories.Any())

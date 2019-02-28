@@ -37,6 +37,8 @@ namespace CoreBlogApp.DataAccess.Migrations
 
                     b.Property<bool>("IsApproved");
 
+                    b.Property<bool>("IsHome");
+
                     b.Property<string>("Title");
 
                     b.HasKey("BlogId");

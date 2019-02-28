@@ -18,31 +18,10 @@
 <div class="container">
     <div class="row">
         <div class="col-md-3">
-            <div class="list-group">
-                <a href="#" class="list-group-item active">
-                    Cras justo odio
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-                <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-                <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-                <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
-            </div>
+            @await Component.InvokeAsync("CategoryMenu")
         </div>
         <div class="col-md-9">
-            @foreach (var item in Model)
-            {
-                <div class="card mt-2">
-                    <div class="card-header">
-                        @item.Title
-                    </div>
-                    <img class="card-img-top" src="~/img/@item.Image" alt="Card image cap">
-                    <div class="card-block">
-                        <h4 class="card-title">@item.Title</h4>
-                        <p class="card-text">@item.Description</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            }
+            @Html.Partial("_BlogList", Model)
 
         </div>
 

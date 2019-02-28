@@ -15,9 +15,12 @@ namespace CoreBlogApp.WebUI.Controllers
         private readonly BlogManager blogManager = new BlogManager();
         public IActionResult Index()
         {
-            MessageResult<Blog> messageResult = blogManager.Listele(1);
-            Blog blog = messageResult.Result;
-            return View(blogManager.GetAll().ToList());
+            //Onaylı ve anasayfa onayı olanlar gidecek.
+
+            //MessageResult<Blog> messageResult = blogManager.Listele(1);
+            //Blog blog = messageResult.Result;
+
+            return View(blogManager.GetAll().Where(i => i.IsApproved && i.IsHome).OrderByDescending(x => x.Date).ToList());
         }
 
         public IActionResult List()

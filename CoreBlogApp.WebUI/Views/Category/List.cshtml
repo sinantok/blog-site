@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<Category>
 @{
     ViewData["Title"] = "List";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <div class="container mt-3">
@@ -10,6 +11,9 @@
         <div class="col">
             @if (Model.Count() > 0)
             {
+                <p>
+                    <a href="/Category/AddorUpdate" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> New</a>
+                </p>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
@@ -25,8 +29,13 @@
                                 <td>@item.CategoryId</td>
                                 <td>@item.Name</td>
                                 <td>
-                                    @Html.ActionLink("Details", "Details", "Category", new { id = item.CategoryId }, new { @class = "btn btn-primary btn-sm" })
-                                    @Html.ActionLink("Delete", "Delete", "Category", new { id = item.CategoryId }, new { @class = "btn btn-danger btn-sm" })
+                                    @Html.ActionLink("Edit", "AddorUpdate", "Category", new { id = item.CategoryId }, new { @class = "btn btn-primary btn-sm" })
+                                    <a href="/Category/Delete/@item.CategoryId"
+                                       onclick="return confirm('Are you sure want to delete this category?')"
+                                       class="btn btn-danger btn-sm" title="Delete">
+                                        Delete
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </a>
                                     @*<a class="" btn btn-primary btn-sm" asp-controller="Blog" asp-action="Delete" asp-route="@item.Id">Delete</a>*@
                                 </td>
                             </tr>

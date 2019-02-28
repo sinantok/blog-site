@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Blog>
+@if (Model.Count() == 0)
+{
+    <div class="alet alert-warning">Bu kategoriye ait kayıt bulunamadı</div>
+}
+else
+{
+    <p class="lead">Blogs</p>
+    @foreach (var item in Model)
+    {
+        <div class="card mt-2">
+            <div class="card-header">
+                @item.Title
+            </div>
+            <img class="card-img-top" src="~/img/@item.Image" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">@item.Title</h4>
+                <p class="card-text">@item.Description</p>
+                @Html.ActionLink("Blog Details", "Details", "Blog", new { id = item.BlogId }, new { @class = "btn btn-primary" })
+            </div>
+        </div>
+    }
+}

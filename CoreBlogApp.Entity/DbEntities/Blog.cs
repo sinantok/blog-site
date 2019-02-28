@@ -18,6 +18,7 @@ namespace CoreBlogApp.Entity.DbEntities
 
         public DateTime Date { get; set; }
         public bool IsApproved { get; set; }
+        public bool IsHome { get; set; }
 
         public virtual int CategoryId { get; set; }
         public virtual Category Category { get; set; }
