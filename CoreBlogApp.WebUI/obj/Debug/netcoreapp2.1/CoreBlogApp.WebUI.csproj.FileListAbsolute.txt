@@ -36,7 +36,6 @@ C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.WebUI\bin\Debug\netcorea
 C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.WebUI\bin\Debug\netcoreapp2.1\CoreBlogApp.Core.pdb
 C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.WebUI\obj\Debug\netcoreapp2.1\Razor\Views\Blog\List.g.cshtml.cs
 C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.WebUI\obj\Debug\netcoreapp2.1\Razor\Views\Category\List.g.cshtml.cs
-C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.WebUI\obj\Debug\netcoreapp2.1\Razor\Views\Blog\AddorUpdate.g.cshtml.cs
 C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.WebUI\obj\Debug\netcoreapp2.1\Razor\Views\Category\AddorUpdate.g.cshtml.cs
 C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.WebUI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Components\CategoryMenu\Default.g.cshtml.cs
 C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.WebUI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_BlogList.g.cshtml.cs
@@ -45,3 +44,6 @@ C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.WebUI\obj\Debug\netcorea
 C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.WebUI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_BlogDetails.g.cshtml.cs
 C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.WebUI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_AdminLayout.g.cshtml.cs
 C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.WebUI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_SearchBox.g.cshtml.cs
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.WebUI\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Slider.g.cshtml.cs
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.WebUI\obj\Debug\netcoreapp2.1\Razor\Views\Blog\Create.g.cshtml.cs
+C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.WebUI\obj\Debug\netcoreapp2.1\Razor\Views\Blog\Edit.g.cshtml.cs

@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using CoreBlogApp.Business;
 using CoreBlogApp.Entity.DbEntities;
+using Microsoft.AspNetCore.Hosting.Server;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using static System.Net.WebRequestMethods;
 
 namespace CoreBlogApp.WebUI.Controllers
 {
@@ -34,7 +38,7 @@ namespace CoreBlogApp.WebUI.Controllers
             return View(blogManager.GetAll().Where(x => x.IsApproved).OrderByDescending(x => x.Date));
         }
 
-
+        //admin
         public IActionResult List()
         {
             //yönetim ekranı benzerinde bütün blogs listelensin
@@ -52,68 +56,120 @@ namespace CoreBlogApp.WebUI.Controllers
             return View(blogManager.GetById(x => x.BlogId == id.Value));
         }
 
+        //admin
         [HttpGet]
-        public IActionResult AddorUpdate(int? id)
+        public IActionResult Create()
         {
             ViewBag.Categories = new SelectList(categoryManager.GetAll().ToList(), "CategoryId", "Name");
-            if (id == null)
-            {
-                //create
-                return View();
-            }
-            else
-            {
-                return View(blogManager.GetById(x => x.BlogId == id.Value));
-                //update
-            }
+            return View();
         }
 
+        //admin
         [HttpPost]
-        public IActionResult AddorUpdate(Blog model)
+        public async Task<IActionResult> Create(Blog model, IFormFile file)
         {
             ModelState.Remove("Date");
-            ModelState.Remove("BlogId");
-            if(ModelState.IsValid)
+            ModelState.Remove("Image");
+            if (ModelState.IsValid)
             {
-                if(model.BlogId == 0)
+                if (file != null)
                 {
-                    model.Date = DateTime.Now;
-                    blogManager.Insert(model);
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", DateTime.Now.ToShortDateString() + file.FileName);
+                    using (var stream = new FileStream(path, FileMode.Create))
+                    {
+                        await file.CopyToAsync(stream);
+                    }
+                    model.Image = DateTime.Now.ToShortDateString() + file.FileName;
                 }
-                else
+
+                model.Date = DateTime.Now;
+                if(blogManager.Insert(model)==0)
                 {
-                    Blog blog = blogManager.GetById(x => x.BlogId == model.BlogId);
-                    if (blog != null)
-                    {
-                        blog.Body = model.Body;
-                        blog.Title = model.Title;
-                        blog.Description = model.Description;
-                        blog.Image = model.Image;
-                        blog.IsApproved = model.IsApproved;
-                        blog.IsHome = model.IsHome;
-                        if (blogManager.Update(blog) == 0)
-                        {
-                            ModelState.AddModelError("", "Database Error");
-                            ViewBag.Categories = new SelectList(categoryManager.GetAll().ToList(), "CategoryId", "Name");
-                            return View(model);
-                        }
-                    }
-                    else
-                    {
-                        ModelState.AddModelError("", "DataBaseError!");
-                        ViewBag.Categories = new SelectList(categoryManager.GetAll().ToList(), "CategoryId", "Name");
-                        return View(model);
-                    }
-                 
+                    ModelState.AddModelError("", "Database Error!");
+                    ViewBag.Categories = new SelectList(categoryManager.GetAll().ToList(), "CategoryId", "Name");
+                    return View(model);
                 }
+
                 TempData["message"] = $"{model.Title} kayıt edildi.";
-                return RedirectToAction("List","Blog");
+                return RedirectToAction("List", "Blog");
             }
 
             ViewBag.Categories = new SelectList(categoryManager.GetAll().ToList(), "CategoryId", "Name");
             return View();
         }
 
+        //admin
+        [HttpGet]
+        public IActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new BadRequestResult();
+            }
+            else
+            {
+                ViewBag.Categories = new SelectList(categoryManager.GetAll().ToList(), "CategoryId", "Name");
+                return View(blogManager.GetById(x => x.BlogId == id.Value));
+            }
+        }
+
+        //admin
+        [HttpPost]
+        public async Task<IActionResult> Edit(Blog model, IFormFile file)
+        {
+            ModelState.Remove("Date");
+            ModelState.Remove("Image");
+            if (ModelState.IsValid)
+            {
+                Blog blog = blogManager.GetById(x => x.BlogId == model.BlogId);
+                if (blog != null)
+                {
+                    if (file != null)
+                    {
+                        var lastPast = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", model.Image);
+                        ; if (System.IO.File.Exists(lastPast))
+                        {
+                            System.IO.File.Delete(lastPast);
+                        }
+
+                        var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", DateTime.Now.ToShortDateString() + file.FileName);
+                        using (var stream = new FileStream(path, FileMode.Create))
+                        {
+                            await file.CopyToAsync(stream);
+                        }
+
+                        model.Image = DateTime.Now.ToShortDateString() + file.FileName;
+                    }
+
+                    blog.Body = model.Body;
+                    blog.Title = model.Title;
+                    blog.Description = model.Description;
+                    blog.Image = model.Image;
+                    blog.IsApproved = model.IsApproved;
+                    blog.IsHome = model.IsHome;
+                    blog.IsSlider = model.IsSlider;
+                    if (blogManager.Update(blog) == 0)
+                    {
+                        ModelState.AddModelError("", "Database Error!");
+                        ViewBag.Categories = new SelectList(categoryManager.GetAll().ToList(), "CategoryId", "Name");
+                        return View(model);
+                    }
+                    TempData["message"] = $"{model.Title} güncellendi.";
+                    return RedirectToAction("List", "Blog");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Blog Not Found!");
+                    ViewBag.Categories = new SelectList(categoryManager.GetAll().ToList(), "CategoryId", "Name");
+                    return View(model);
+                }
+            }
+
+            ViewBag.Categories = new SelectList(categoryManager.GetAll().ToList(), "CategoryId", "Name");
+            return View();
+        }
+
+        //admin
         public IActionResult Delete(int? id)
         {
             if (id == null)
@@ -123,6 +179,12 @@ namespace CoreBlogApp.WebUI.Controllers
             Blog blog = blogManager.GetById(x => x.BlogId == id.Value);
             if (blog != null)
             {
+                var lastPast = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", blog.Image);
+                ; if (System.IO.File.Exists(lastPast))
+                {
+                    System.IO.File.Delete(lastPast);
+                }
+
                 blogManager.Delete(blog);
             }
 

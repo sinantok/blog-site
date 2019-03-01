@@ -6,6 +6,7 @@ using CoreBlogApp.Business;
 using CoreBlogApp.DataAccess.Concrete.EFCore;
 using CoreBlogApp.Entity.DbEntities;
 using CoreBlogApp.Entity.ResultModel;
+using CoreBlogApp.WebUI.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreBlogApp.WebUI.Controllers
@@ -20,7 +21,11 @@ namespace CoreBlogApp.WebUI.Controllers
             //MessageResult<Blog> messageResult = blogManager.Listele(1);
             //Blog blog = messageResult.Result;
 
-            return View(blogManager.GetAll().Where(i => i.IsApproved && i.IsHome).OrderByDescending(x => x.Date).ToList());
+            IndexBlogModel models = new IndexBlogModel();
+            models.IndexBlogs = blogManager.GetAll().Where(i => i.IsApproved && i.IsHome).OrderByDescending(x => x.Date).ToList();
+            models.SliderBlogs = blogManager.GetAll().Where(i => i.IsApproved && i.IsSlider).OrderByDescending(x => x.Date).ToList();
+
+            return View(models);
         }
 
         public IActionResult List()

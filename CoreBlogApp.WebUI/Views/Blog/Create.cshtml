@@ -1,16 +1,14 @@
 ﻿@model Blog
 @{
-    ViewData["Title"] = "AddorUpdate";
+    ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <div class="container">
-    <h2>Blog</h2>
+    <h2>Create Blog</h2>
     <br />
-    <form asp-controller="Blog" asp-action="AddorUpdate" method="post">
+    <form asp-controller="Blog" asp-action="Create" method="post" enctype="multipart/form-data">
 
-        @Html.HiddenFor(model => model.BlogId)
-        @*<input type="hidden" asp-for="BlogId"/>*@
         <div class="form-group">
             <label asp-for="Title"></label>
             <input asp-for="Title" class="form-control">
@@ -27,8 +25,8 @@
         </div>
 
         <div class="form-group">
-            <label asp-for="Image"></label>
-            <input asp-for="Image" class="form-control">
+            <label>Image</label>
+            <input type="file" name="file" id="file" class="form-control">
         </div>
 
         <div class="form-check">
@@ -42,6 +40,13 @@
             <label>
                 <input asp-for="IsHome" class="form-check-input" />
                 Is Home
+            </label>
+        </div>
+
+        <div class="form-check">
+            <label>
+                <input asp-for="IsSlider" class="form-check-input" />
+                Is Slider
             </label>
         </div>
 
