@@ -1,0 +1,102 @@
+﻿@model IEnumerable<Blog>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container mt-3">
+    <h2>Blog List</h2>
+    <hr />
+    <div class="row">
+        <div class="col">
+            @if (Model.Count() > 0)
+            {
+                var say = 0;
+                <p>
+                    <a href="/Admin/Blog/Create" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> New</a>
+                </p>
+
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Date</th>
+                            <th>Is Approved</th>
+                            <th>Is Home</th>
+                            <th>Is Slider</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            say++;
+                            <tr>
+                                <td>@say</td>
+                                <td>
+                                    <img src="~/img/@item.Image" width="50%" height="auto" />
+                                </td>
+                                <td>@item.Title</td>
+                                <td>@item.Date</td>
+                                <td>
+                                    @if (@item.IsApproved)
+                                    {
+                                        <i class="fa fa-check" aria-hidden="true"> </i>
+                                    }
+                                    else
+                                    {
+                                        <i class="fa fa-times" aria-hidden="true"> </i>
+                                    }
+
+                                </td>
+                                <td>
+                                    @if (@item.IsHome)
+                                    {
+                                        <i class="fa fa-check" aria-hidden="true"> </i>
+                                    }
+                                    else
+                                    {
+                                        <i class="fa fa-times" aria-hidden="true"> </i>
+                                    }
+
+                                </td>
+                                <td>
+                                    @if (@item.IsSlider)
+                                    {
+                                        <i class="fa fa-check" aria-hidden="true"> </i>
+                                    }
+                                    else
+                                    {
+                                        <i class="fa fa-times" aria-hidden="true"> </i>
+                                    }
+
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Edit", "Edit", "Blog", new { area = "Admin", id = item.BlogId }, new { @class = "btn btn-primary btn-sm" })
+                                    <a href="/Admin/Blog/Delete/@item.BlogId"
+                                       onclick="return confirm('Are you sure want to delete this blog?')"
+                                       class="btn btn-danger btn-sm" title="Delete">
+                                        Delete
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <div class="alert alert-danger">
+                    Blog not found
+                </div>
+            }
+
+        </div>
+
+    </div>
+
+</div>
+

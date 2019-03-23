@@ -61,11 +61,20 @@ namespace CoreBlogApp.WebUI
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute("areaRoute", "{area:exists}/{controller=Blog}/{action=Index}/{id?}");
+
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+
+                //routes.MapRoute(
+                //    name: "areas",
+                //    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                //);
             });
 
+
+            
             //seed methodunun uygulanması
             MyInitializer.Seed(app);
 

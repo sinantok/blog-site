@@ -12609,11 +12609,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sinan Tok\\source\\repos\\CoreBlogApp\\CoreBlogApp.WebUI\\CoreBlogApp.WebUI.csproj",
+      "projectUniqueName": "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.WebUI\\CoreBlogApp.WebUI.csproj",
       "projectName": "CoreBlogApp.WebUI",
-      "projectPath": "C:\\Users\\Sinan Tok\\source\\repos\\CoreBlogApp\\CoreBlogApp.WebUI\\CoreBlogApp.WebUI.csproj",
+      "projectPath": "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.WebUI\\CoreBlogApp.WebUI.csproj",
       "packagesPath": "C:\\Users\\Sinan Tok\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sinan Tok\\source\\repos\\CoreBlogApp\\CoreBlogApp.WebUI\\obj\\",
+      "outputPath": "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.WebUI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12632,14 +12632,14 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Sinan Tok\\source\\repos\\CoreBlogApp\\CoreBlogApp.Business\\CoreBlogApp.Business.csproj": {
-              "projectPath": "C:\\Users\\Sinan Tok\\source\\repos\\CoreBlogApp\\CoreBlogApp.Business\\CoreBlogApp.Business.csproj"
+            "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.Business\\CoreBlogApp.Business.csproj": {
+              "projectPath": "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.Business\\CoreBlogApp.Business.csproj"
             },
-            "C:\\Users\\Sinan Tok\\source\\repos\\CoreBlogApp\\CoreBlogApp.DataAccess\\CoreBlogApp.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\Sinan Tok\\source\\repos\\CoreBlogApp\\CoreBlogApp.DataAccess\\CoreBlogApp.DataAccess.csproj"
+            "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.DataAccess\\CoreBlogApp.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.DataAccess\\CoreBlogApp.DataAccess.csproj"
             },
-            "C:\\Users\\Sinan Tok\\source\\repos\\CoreBlogApp\\CoreBlogApp.Entity\\CoreBlogApp.Entity.csproj": {
-              "projectPath": "C:\\Users\\Sinan Tok\\source\\repos\\CoreBlogApp\\CoreBlogApp.Entity\\CoreBlogApp.Entity.csproj"
+            "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.Entity\\CoreBlogApp.Entity.csproj": {
+              "projectPath": "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.Entity\\CoreBlogApp.Entity.csproj"
             }
           }
         }

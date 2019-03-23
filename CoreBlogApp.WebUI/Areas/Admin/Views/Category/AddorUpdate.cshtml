@@ -1,0 +1,21 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "AddorUpdate";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <h2>Create Category</h2>
+    <br />
+    <form asp-controller="Category" asp-action="AddorUpdate" method="post">
+        @Html.HiddenFor(x => x.CategoryId)
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+

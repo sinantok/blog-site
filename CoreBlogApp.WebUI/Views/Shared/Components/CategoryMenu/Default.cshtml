@@ -6,6 +6,5 @@
         <a class="list-group-item @(ViewBag.SelectedCategory == item.CategoryId.ToString() ? "active" : "")" href="/Blog/Index/@item.CategoryId">
             @item.Name
         </a>
-        @*@Html.ActionLink(item.Name, "Index", "Blog", new { id = item.CategoryId }, new { @class = "list-group-item" })*@
     }
 </div> 

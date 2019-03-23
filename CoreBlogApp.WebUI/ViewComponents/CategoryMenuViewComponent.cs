@@ -10,7 +10,7 @@ namespace CoreBlogApp.WebUI.ViewComponents
     public class CategoryMenuViewComponent: ViewComponent
     {
         CategoryManager categoryManager = new CategoryManager();
-        BlogManager blogManager = new BlogManager();
+       
         public IViewComponentResult Invoke()
         {
             ViewBag.SelectedCategory = RouteData?.Values["id"];

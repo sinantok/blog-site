@@ -22,5 +22,10 @@
     <ProjectReference Include="..\CoreBlogApp.DataAccess\CoreBlogApp.DataAccess.csproj" />
     <ProjectReference Include="..\CoreBlogApp.Entity\CoreBlogApp.Entity.csproj" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+  </ItemGroup>
 
 </Project>

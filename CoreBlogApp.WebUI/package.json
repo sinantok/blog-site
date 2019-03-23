@@ -5,6 +5,7 @@
   "devDependencies": {
     "bootstrap": "4.0.0-alpha.6",
     "jquery": "3.3.1",
-    "font-awesome": "4.7.0"
+    "font-awesome": "4.7.0",
+    "ckeditor": "4.11.3"
   }
 }

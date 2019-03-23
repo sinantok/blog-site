@@ -7,3 +7,11 @@ C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Core\obj\Debug\netcoreap
 C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Core\obj\Debug\netcoreapp2.1\CoreBlogApp.Core.dll
 C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Core\obj\Debug\netcoreapp2.1\CoreBlogApp.Core.pdb
 C:\Users\Sinan Tok\source\repos\CoreBlogApp\CoreBlogApp.Core\obj\Debug\netcoreapp2.1\CoreBlogApp.Core.csprojAssemblyReference.cache
+C:\Users\Sinan Tok\Desktop\CoreBlogApp\CoreBlogApp.Core\bin\Debug\netcoreapp2.1\CoreBlogApp.Core.deps.json
+C:\Users\Sinan Tok\Desktop\CoreBlogApp\CoreBlogApp.Core\bin\Debug\netcoreapp2.1\CoreBlogApp.Core.dll
+C:\Users\Sinan Tok\Desktop\CoreBlogApp\CoreBlogApp.Core\bin\Debug\netcoreapp2.1\CoreBlogApp.Core.pdb
+C:\Users\Sinan Tok\Desktop\CoreBlogApp\CoreBlogApp.Core\obj\Debug\netcoreapp2.1\CoreBlogApp.Core.csproj.CoreCompileInputs.cache
+C:\Users\Sinan Tok\Desktop\CoreBlogApp\CoreBlogApp.Core\obj\Debug\netcoreapp2.1\CoreBlogApp.Core.AssemblyInfoInputs.cache
+C:\Users\Sinan Tok\Desktop\CoreBlogApp\CoreBlogApp.Core\obj\Debug\netcoreapp2.1\CoreBlogApp.Core.AssemblyInfo.cs
+C:\Users\Sinan Tok\Desktop\CoreBlogApp\CoreBlogApp.Core\obj\Debug\netcoreapp2.1\CoreBlogApp.Core.dll
+C:\Users\Sinan Tok\Desktop\CoreBlogApp\CoreBlogApp.Core\obj\Debug\netcoreapp2.1\CoreBlogApp.Core.pdb

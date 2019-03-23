@@ -7,10 +7,10 @@
         <div class="col-md-3 mt-4">
             @await Component.InvokeAsync("CategoryMenu")
         </div>
+
         <div class="col-md-9">
             @Html.Partial("_Slider",Model.SliderBlogs)
             @Html.Partial("_BlogList", Model.IndexBlogs)
-
         </div>
 
     </div>
