@@ -1,2 +1,5 @@
-# blog-site
-Blog Site application with layered architecture, .Net Core Mvc and Entity Framework
+# Blog-Site
+
+This project was developed in the layered architecture structure with Net Mvc Core and Entity framework code-first.
+
+--Node modules in Package.json must be installed
