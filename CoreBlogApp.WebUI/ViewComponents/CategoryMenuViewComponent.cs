@@ -1,4 +1,5 @@
 ﻿using CoreBlogApp.Business;
+using CoreBlogApp.Business.Abstract;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,12 +10,18 @@ namespace CoreBlogApp.WebUI.ViewComponents
 {
     public class CategoryMenuViewComponent: ViewComponent
     {
-        CategoryManager categoryManager = new CategoryManager();
        
+        private readonly ICategoryService _categoryService;
+
+        public CategoryMenuViewComponent(ICategoryService categoryService)
+        {
+            _categoryService = categoryService;
+        }
+
         public IViewComponentResult Invoke()
         {
             ViewBag.SelectedCategory = RouteData?.Values["id"];
-            return View(categoryManager.GetAll());
+            return View(_categoryService.GetAll().OrderByDescending(x => x.CategoryId));
         }
     }
 }

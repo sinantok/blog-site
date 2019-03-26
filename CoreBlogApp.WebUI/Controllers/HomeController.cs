@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CoreBlogApp.Business;
-using CoreBlogApp.DataAccess.Concrete.EFCore;
+using CoreBlogApp.Business.Abstract;
 using CoreBlogApp.Entity.DbEntities;
 using CoreBlogApp.Entity.ResultModel;
 using CoreBlogApp.WebUI.Models;
@@ -13,17 +13,23 @@ namespace CoreBlogApp.WebUI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly BlogManager blogManager = new BlogManager();
+        private ICategoryService _categoryService;
+        private IBlogService _blogService;
+        //DI
+        public HomeController(ICategoryService categoryService, IBlogService blogService)
+        {
+            _categoryService = categoryService;
+            _blogService = blogService;
+        }
+
         public IActionResult Index()
         {
             //Onaylı ve anasayfa onayı olanlar gidecek.
 
-            //MessageResult<Blog> messageResult = blogManager.Listele(1);
-            //Blog blog = messageResult.Result;
-
             IndexBlogModel models = new IndexBlogModel();
-            models.IndexBlogs = blogManager.GetAll().Where(i => i.IsApproved && i.IsHome).OrderByDescending(x => x.Date).ToList();
-            models.SliderBlogs = blogManager.GetAll().Where(i => i.IsApproved && i.IsSlider).OrderByDescending(x => x.Date).ToList();
+
+            models.IndexBlogs = _blogService.GetAllHomePage();
+            models.SliderBlogs = _blogService.GetAllSlider();
 
             return View(models);
         }

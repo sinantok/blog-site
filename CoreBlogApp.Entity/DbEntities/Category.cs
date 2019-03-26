@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CoreBlogApp.Core.Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -6,7 +7,7 @@ using System.Text;
 
 namespace CoreBlogApp.Entity.DbEntities
 {
-    public class Category
+    public class Category : IEntitiy
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CategoryId { get; set; }

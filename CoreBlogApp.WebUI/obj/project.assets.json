@@ -4632,6 +4632,9 @@
       "CoreBlogApp.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1"
+        },
         "compile": {
           "bin/placeholder/CoreBlogApp.Core.dll": {}
         },
@@ -4658,6 +4661,9 @@
       "CoreBlogApp.Entity/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "CoreBlogApp.Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/CoreBlogApp.Entity.dll": {}
         },
@@ -12594,7 +12600,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "CoreBlogApp.Business >= 1.0.0",
-      "CoreBlogApp.DataAccess >= 1.0.0",
+      "CoreBlogApp.Core >= 1.0.0",
       "CoreBlogApp.Entity >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
@@ -12635,8 +12641,8 @@
             "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.Business\\CoreBlogApp.Business.csproj": {
               "projectPath": "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.Business\\CoreBlogApp.Business.csproj"
             },
-            "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.DataAccess\\CoreBlogApp.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.DataAccess\\CoreBlogApp.DataAccess.csproj"
+            "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.Core\\CoreBlogApp.Core.csproj": {
+              "projectPath": "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.Core\\CoreBlogApp.Core.csproj"
             },
             "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.Entity\\CoreBlogApp.Entity.csproj": {
               "projectPath": "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.Entity\\CoreBlogApp.Entity.csproj"

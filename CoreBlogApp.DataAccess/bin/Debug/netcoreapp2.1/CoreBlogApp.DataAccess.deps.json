@@ -48,6 +48,9 @@
         }
       },
       "CoreBlogApp.Entity/1.0.0": {
+        "dependencies": {
+          "CoreBlogApp.Core": "1.0.0"
+        },
         "runtime": {
           "CoreBlogApp.Entity.dll": {}
         }

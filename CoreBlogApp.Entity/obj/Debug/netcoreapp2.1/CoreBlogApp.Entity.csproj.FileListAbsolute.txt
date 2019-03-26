@@ -15,3 +15,7 @@ C:\Users\Sinan Tok\Desktop\CoreBlogApp\CoreBlogApp.Entity\obj\Debug\netcoreapp2.
 C:\Users\Sinan Tok\Desktop\CoreBlogApp\CoreBlogApp.Entity\obj\Debug\netcoreapp2.1\CoreBlogApp.Entity.AssemblyInfo.cs
 C:\Users\Sinan Tok\Desktop\CoreBlogApp\CoreBlogApp.Entity\obj\Debug\netcoreapp2.1\CoreBlogApp.Entity.dll
 C:\Users\Sinan Tok\Desktop\CoreBlogApp\CoreBlogApp.Entity\obj\Debug\netcoreapp2.1\CoreBlogApp.Entity.pdb
+C:\Users\Sinan Tok\Desktop\CoreBlogApp\CoreBlogApp.Entity\bin\Debug\netcoreapp2.1\CoreBlogApp.Core.dll
+C:\Users\Sinan Tok\Desktop\CoreBlogApp\CoreBlogApp.Entity\bin\Debug\netcoreapp2.1\CoreBlogApp.Core.pdb
+C:\Users\Sinan Tok\Desktop\CoreBlogApp\CoreBlogApp.Entity\obj\Debug\netcoreapp2.1\CoreBlogApp.Entity.csprojAssemblyReference.cache
+C:\Users\Sinan Tok\Desktop\CoreBlogApp\CoreBlogApp.Entity\obj\Debug\netcoreapp2.1\CoreBlogApp.Entity.csproj.CopyComplete

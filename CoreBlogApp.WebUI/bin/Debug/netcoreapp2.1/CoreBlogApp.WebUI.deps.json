@@ -25,7 +25,7 @@
       "CoreBlogApp.WebUI/1.0.0": {
         "dependencies": {
           "CoreBlogApp.Business": "1.0.0",
-          "CoreBlogApp.DataAccess": "1.0.0",
+          "CoreBlogApp.Core": "1.0.0",
           "CoreBlogApp.Entity": "1.0.0",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
@@ -529,6 +529,9 @@
         }
       },
       "CoreBlogApp.Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1"
+        },
         "runtime": {
           "CoreBlogApp.Core.dll": {}
         },
@@ -551,6 +554,9 @@
         }
       },
       "CoreBlogApp.Entity/1.0.0": {
+        "dependencies": {
+          "CoreBlogApp.Core": "1.0.0"
+        },
         "runtime": {
           "CoreBlogApp.Entity.dll": {}
         },

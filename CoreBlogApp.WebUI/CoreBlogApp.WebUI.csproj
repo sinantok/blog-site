@@ -19,7 +19,7 @@
   
   <ItemGroup>
     <ProjectReference Include="..\CoreBlogApp.Business\CoreBlogApp.Business.csproj" />
-    <ProjectReference Include="..\CoreBlogApp.DataAccess\CoreBlogApp.DataAccess.csproj" />
+    <ProjectReference Include="..\CoreBlogApp.Core\CoreBlogApp.Core.csproj" />
     <ProjectReference Include="..\CoreBlogApp.Entity\CoreBlogApp.Entity.csproj" />
   </ItemGroup>
   

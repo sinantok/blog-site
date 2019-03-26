@@ -64,7 +64,7 @@ using CoreBlogApp.Entity.DbEntities;
             WriteLiteral("\r\n    </div>\r\n    ");
             EndContext();
             BeginContext(109, 70, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "e1aab84a1bca41359e3e409b2bb34ec2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "365a8b5835f44cab9504e5a7720b4915", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

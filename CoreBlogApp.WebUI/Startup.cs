@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using CoreBlogApp.DataAccess.Concrete.EFCore;
+using CoreBlogApp.Business.Abstract;
+using CoreBlogApp.Business.Concrete;
+using CoreBlogApp.DataAccess.Abstract;
+using CoreBlogApp.DataAccess.Concrete.EntityFramework;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -27,10 +30,17 @@ namespace CoreBlogApp.WebUI
 
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddTransient<IRepository, Repository>();
 
             //services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("CoreBlogApp.WebUI")));
+
+            services.AddScoped<ICategoryService, CategoryManager>();
+            services.AddScoped<IBlogService, BlogManager>();
+            services.AddScoped<IBlogDal, EfBlogDal>();
+            services.AddScoped<ICategoryDal, EfCategoryDal>();
+            //services.AddDbContext<DatabaseContext>();
+
             services.AddMvc();
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,7 +52,7 @@ namespace CoreBlogApp.WebUI
             }
 
             app.UseStatusCodePages();
-            app.UseStaticFiles();
+            app.UseStaticFiles();  // Static içerikler (css,js ve image) dosyaları için wwwroot klasörüne erişim izni
 
             //app.UseStaticFiles(new StaticFileOptions()
             //{
@@ -57,7 +67,7 @@ namespace CoreBlogApp.WebUI
                 EnableDirectoryBrowsing = true
             });
 
-              // Static içerikler (css,js ve image) dosyaları için wwwroot klasörüne erişim izni
+            
 
             app.UseMvc(routes =>
             {
@@ -72,13 +82,9 @@ namespace CoreBlogApp.WebUI
                 //    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
                 //);
             });
-
-
             
             //seed methodunun uygulanması
-            MyInitializer.Seed(app);
-
-           
+            MyInitializer.Seed();
 
         }
     }

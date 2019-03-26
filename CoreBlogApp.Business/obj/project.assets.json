@@ -4332,6 +4332,9 @@
       "CoreBlogApp.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1"
+        },
         "compile": {
           "bin/placeholder/CoreBlogApp.Core.dll": {}
         },
@@ -4358,6 +4361,9 @@
       "CoreBlogApp.Entity/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "CoreBlogApp.Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/CoreBlogApp.Entity.dll": {}
         },

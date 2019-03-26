@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CoreBlogApp.DataAccess.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class First : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -33,6 +33,8 @@ namespace CoreBlogApp.DataAccess.Migrations
                     Image = table.Column<string>(nullable: true),
                     Date = table.Column<DateTime>(nullable: false),
                     IsApproved = table.Column<bool>(nullable: false),
+                    IsHome = table.Column<bool>(nullable: false),
+                    IsSlider = table.Column<bool>(nullable: false),
                     CategoryId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

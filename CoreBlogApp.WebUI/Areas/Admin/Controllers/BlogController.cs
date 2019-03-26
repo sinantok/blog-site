@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using CoreBlogApp.Business;
+using CoreBlogApp.Business.Abstract;
 using CoreBlogApp.Entity.DbEntities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -14,18 +15,24 @@ namespace CoreBlogApp.WebUI.Areas.Admin.Controllers
     [Area("Admin")]
     public class BlogController : Controller
     {
-        private BlogManager blogManager = new BlogManager();
-        private CategoryManager categoryManager = new CategoryManager();
+        private IBlogService _blogService;
+        private ICategoryService _categoryService;
+
+        public BlogController(IBlogService blogService,ICategoryService categoryService)
+        {
+            _blogService = blogService;
+            _categoryService = categoryService;
+        }
 
         public IActionResult Index()
         {
-            return View(blogManager.GetAll().OrderByDescending(x => x.Date).ToList());
+            return View(_blogService.GetAll().OrderByDescending(x => x.Date));
         }
 
         [HttpGet]
         public IActionResult Create()
         {
-            ViewBag.Categories = new SelectList(categoryManager.GetAll().ToList(), "CategoryId", "Name");
+            ViewBag.Categories = new SelectList(_categoryService.GetAll(), "CategoryId", "Name");
             return View();
         }
 
@@ -47,10 +54,10 @@ namespace CoreBlogApp.WebUI.Areas.Admin.Controllers
                 }
 
                 model.Date = DateTime.Now;
-                if (blogManager.Insert(model) == 0)
+                if (_blogService.Insert(model) == 0)
                 {
                     ModelState.AddModelError("", "Database Error!");
-                    ViewBag.Categories = new SelectList(categoryManager.GetAll().ToList(), "CategoryId", "Name");
+                    ViewBag.Categories = new SelectList(_categoryService.GetAll(), "CategoryId", "Name");
                     return View(model);
                 }
 
@@ -58,7 +65,7 @@ namespace CoreBlogApp.WebUI.Areas.Admin.Controllers
                 return RedirectToAction("Index", "Blog", new { area = "Admin" });
             }
 
-            ViewBag.Categories = new SelectList(categoryManager.GetAll().ToList(), "CategoryId", "Name");
+            ViewBag.Categories = new SelectList(_categoryService.GetAll(), "CategoryId", "Name");
             return View();
         }
 
@@ -71,8 +78,8 @@ namespace CoreBlogApp.WebUI.Areas.Admin.Controllers
             }
             else
             {
-                ViewBag.Categories = new SelectList(categoryManager.GetAll().ToList(), "CategoryId", "Name");
-                return View(blogManager.GetById(x => x.BlogId == id.Value));
+                ViewBag.Categories = new SelectList(_categoryService.GetAll(), "CategoryId", "Name");
+                return View(_blogService.GetById(id.Value));
             }
         }
 
@@ -83,7 +90,7 @@ namespace CoreBlogApp.WebUI.Areas.Admin.Controllers
             ModelState.Remove("Image");
             if (ModelState.IsValid)
             {
-                Blog blog = blogManager.GetById(x => x.BlogId == model.BlogId);
+                Blog blog = _blogService.GetById(model.BlogId);
                 if (blog != null)
                 {
                     if (file != null)
@@ -111,10 +118,10 @@ namespace CoreBlogApp.WebUI.Areas.Admin.Controllers
                     blog.IsHome = model.IsHome;
                     blog.IsSlider = model.IsSlider;
                     blog.CategoryId = model.CategoryId;
-                    if (blogManager.Update(blog) == 0)
+                    if (_blogService.Update(blog) == 0)
                     {
                         ModelState.AddModelError("", "Database Error!");
-                        ViewBag.Categories = new SelectList(categoryManager.GetAll().ToList(), "CategoryId", "Name");
+                        ViewBag.Categories = new SelectList(_categoryService.GetAll(), "CategoryId", "Name");
                         return View(model);
                     }
                     TempData["message"] = $"{model.Title} güncellendi.";
@@ -123,12 +130,12 @@ namespace CoreBlogApp.WebUI.Areas.Admin.Controllers
                 else
                 {
                     ModelState.AddModelError("", "Blog Not Found!");
-                    ViewBag.Categories = new SelectList(categoryManager.GetAll().ToList(), "CategoryId", "Name");
+                    ViewBag.Categories = new SelectList(_categoryService.GetAll(), "CategoryId", "Name");
                     return View(model);
                 }
             }
 
-            ViewBag.Categories = new SelectList(categoryManager.GetAll().ToList(), "CategoryId", "Name");
+            ViewBag.Categories = new SelectList(_categoryService.GetAll(), "CategoryId", "Name");
             return View();
         }
 
@@ -138,7 +145,7 @@ namespace CoreBlogApp.WebUI.Areas.Admin.Controllers
             {
                 return new BadRequestResult();
             }
-            Blog blog = blogManager.GetById(x => x.BlogId == id.Value);
+            Blog blog = _blogService.GetById(id.Value);
             if (blog != null)
             {
                 var lastPast = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img", blog.Image);
@@ -147,7 +154,7 @@ namespace CoreBlogApp.WebUI.Areas.Admin.Controllers
                     System.IO.File.Delete(lastPast);
                 }
 
-                blogManager.Delete(blog);
+                _blogService.Delete(blog);
             }
             TempData["message"] = $"{blog.Title} silindi.";
             return RedirectToAction("Index", "Blog", new { area = "Admin" });
