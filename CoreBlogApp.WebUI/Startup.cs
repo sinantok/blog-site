@@ -7,6 +7,7 @@ using CoreBlogApp.Business.Abstract;
 using CoreBlogApp.Business.Concrete;
 using CoreBlogApp.DataAccess.Abstract;
 using CoreBlogApp.DataAccess.Concrete.EntityFramework;
+using CoreBlogApp.WebUI.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -53,19 +54,14 @@ namespace CoreBlogApp.WebUI
 
             app.UseStatusCodePages();
             app.UseStaticFiles();  // Static içerikler (css,js ve image) dosyaları için wwwroot klasörüne erişim izni
+            app.UseNodeModules(env.ContentRootPath);//node_modules extension
 
-            //app.UseStaticFiles(new StaticFileOptions()
+            //app.UseFileServer(new FileServerOptions()
             //{
             //    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"node_modules")),
-            //    RequestPath = new PathString("/node_modules")
+            //    RequestPath = new PathString("/node_modules"),
+            //    EnableDirectoryBrowsing = true
             //});
-
-            app.UseFileServer(new FileServerOptions()
-            {
-                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"node_modules")),
-                RequestPath = new PathString("/node_modules"),
-                EnableDirectoryBrowsing = true
-            });
 
             
 
@@ -77,10 +73,6 @@ namespace CoreBlogApp.WebUI
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
 
-                //routes.MapRoute(
-                //    name: "areas",
-                //    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
-                //);
             });
             
             //seed methodunun uygulanması

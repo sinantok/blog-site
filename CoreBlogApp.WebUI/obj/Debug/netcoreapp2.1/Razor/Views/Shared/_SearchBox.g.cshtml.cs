@@ -55,7 +55,7 @@ using CoreBlogApp.Entity.DbEntities;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             BeginContext(0, 281, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4273229ab6754feaa39132173313335c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2ecbc401f965431986d451e479e47195", async() => {
                 BeginContext(93, 181, true);
                 WriteLiteral("\r\n    <input id=\"q\" name=\"q\" class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\r\n    <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>\r\n");
                 EndContext();
