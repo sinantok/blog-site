@@ -3493,11 +3493,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.Entity\\CoreBlogApp.Entity.csproj",
+      "projectUniqueName": "C:\\Users\\Sinan Tok\\Desktop\\CoreBlogApp\\CoreBlogApp.Entity\\CoreBlogApp.Entity.csproj",
       "projectName": "CoreBlogApp.Entity",
-      "projectPath": "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.Entity\\CoreBlogApp.Entity.csproj",
+      "projectPath": "C:\\Users\\Sinan Tok\\Desktop\\CoreBlogApp\\CoreBlogApp.Entity\\CoreBlogApp.Entity.csproj",
       "packagesPath": "C:\\Users\\Sinan Tok\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.Entity\\obj\\",
+      "outputPath": "C:\\Users\\Sinan Tok\\Desktop\\CoreBlogApp\\CoreBlogApp.Entity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3516,8 +3516,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.Core\\CoreBlogApp.Core.csproj": {
-              "projectPath": "C:\\Users\\Sinan Tok\\Desktop\\WebProjects\\NetCore\\CoreBlogApp\\CoreBlogApp.Core\\CoreBlogApp.Core.csproj"
+            "C:\\Users\\Sinan Tok\\Desktop\\CoreBlogApp\\CoreBlogApp.Core\\CoreBlogApp.Core.csproj": {
+              "projectPath": "C:\\Users\\Sinan Tok\\Desktop\\CoreBlogApp\\CoreBlogApp.Core\\CoreBlogApp.Core.csproj"
             }
           }
         }

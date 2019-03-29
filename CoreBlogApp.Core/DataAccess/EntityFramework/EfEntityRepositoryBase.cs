@@ -54,6 +54,8 @@ namespace CoreBlogApp.Core.DataAccess.EntityFramework
         {
             using (var contex = new TContext())
             {
+                var updateEntity = contex.Entry(obj);
+                updateEntity.State = EntityState.Modified;
                 return contex.SaveChanges();
             }
         }

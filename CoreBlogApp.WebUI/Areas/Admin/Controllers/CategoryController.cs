@@ -73,7 +73,7 @@ namespace CoreBlogApp.WebUI.Areas.Admin.Controllers
 
             return View();
         }
-
+        
         public IActionResult Delete(int? id)
         {
             if (id == null)
